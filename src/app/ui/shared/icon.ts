@@ -74,6 +74,7 @@ export const PROGRAM_ICONS = [
   'star',
   'music',
   'school',
+  'globe',
   'sparkles',
 ];
 

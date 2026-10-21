@@ -18,7 +18,11 @@ values
   ('Apoyo escolar', 'apoyo-escolar', 'Tareas, hábitos de estudio y refuerzo de materias.',
    'Acompañamiento de tareas y refuerzo de lectura, escritura y matemáticas.',
    72, 144, 'domicilio', 850, 'mensual', 3, 90, 'green', 'book',
-   array['Refuerzo de materias', 'Preparación de exámenes', 'Reporte semanal'], false, 4)
+   array['Refuerzo de materias', 'Preparación de exámenes', 'Reporte semanal'], false, 4),
+  ('Inglés inicial', 'ingles-inicial', 'Primeras palabras en inglés jugando, cantando y explorando.',
+   'Introducción natural al inglés con canciones, cuentos, juegos y rutinas, al ritmo de cada edad.',
+   12, 72, 'domicilio', 600, 'mensual', 2, 45, 'red', 'globe',
+   array['Canciones y cuentos en inglés', 'Vocabulario de la vida diaria', 'Material para repasar en casa'], false, 6)
 on conflict (slug) do nothing;
 
 -- Para convertir tu cuenta en administrador (después de registrarte en Auth):

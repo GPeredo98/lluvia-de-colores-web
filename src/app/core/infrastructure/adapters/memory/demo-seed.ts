@@ -133,6 +133,32 @@ export const seedPrograms = (): Program[] => [
     isActive: true,
     sortOrder: 5,
   },
+  {
+    id: 'prg-ingles',
+    name: 'Inglés inicial',
+    slug: 'ingles-inicial',
+    summary: 'Primeras palabras en inglés jugando, cantando y explorando.',
+    description:
+      'Introducción natural al inglés con canciones, cuentos, juegos y rutinas. Los niños se familiarizan con sonidos, vocabulario cotidiano y frases simples sin presión, al ritmo de su edad.',
+    ageMinMonths: 12,
+    ageMaxMonths: 72,
+    modality: 'domicilio',
+    price: 600,
+    currency: 'BOB',
+    pricePeriod: 'mensual',
+    sessionsPerWeek: 2,
+    sessionMinutes: 45,
+    color: 'red',
+    icon: 'globe',
+    features: [
+      'Canciones y cuentos en inglés',
+      'Vocabulario de la vida diaria',
+      'Material para repasar en casa',
+    ],
+    isFeatured: false,
+    isActive: true,
+    sortOrder: 6,
+  },
 ];
 
 export const seedStaff = (): Staff[] => [

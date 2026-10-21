@@ -64,6 +64,10 @@ export function ageLabel(birthDate: string, at: string = today()): string {
 }
 
 export function ageRangeLabel(minMonths: number, maxMonths: number): string {
+  // "1 – 6 años" cuando ambos extremos son años exactos.
+  if (minMonths >= 12 && minMonths % 12 === 0 && maxMonths % 12 === 0) {
+    return `${minMonths / 12} – ${maxMonths / 12} años`;
+  }
   const fmt = (m: number) => (m < 24 ? `${m} meses` : `${Math.floor(m / 12)} años`);
   return `${fmt(minMonths)} – ${fmt(maxMonths)}`;
 }
