@@ -196,9 +196,10 @@ const RAIN = [
       }
     }
     .cloud {
+      border-radius: 50%;
       position: absolute;
-      inset: 16%;
-      width: 68%;
+      inset: 13%;
+      width: 85%;
       height: auto;
       filter: drop-shadow(0 24px 30px rgb(21 101 216 / 22%));
       animation: bob 5s ease-in-out infinite;
