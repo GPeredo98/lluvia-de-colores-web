@@ -66,9 +66,8 @@ import { Icon } from '../../shared/icon';
       padding-block: 3.5rem 2rem;
     }
     .brand img {
-      height: 64px;
+      height: 82px;
       width: auto;
-      padding: 8px 14px;
       border-radius: 16px;
     }
     .brand p {
