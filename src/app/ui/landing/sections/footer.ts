@@ -14,7 +14,7 @@ import { Icon } from '../../shared/icon';
       <div class="container cols">
         <div class="brand">
           <img
-            src="resources/logo.png"
+            src="resources/logo-white.png"
             alt="Lluvia de Colores"
             width="200"
             height="70"
@@ -68,7 +68,6 @@ import { Icon } from '../../shared/icon';
     .brand img {
       height: 64px;
       width: auto;
-      background: #fff;
       padding: 8px 14px;
       border-radius: 16px;
     }
