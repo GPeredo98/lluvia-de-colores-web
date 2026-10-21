@@ -83,7 +83,7 @@ const RAIN = [
 
         <div class="art" aria-hidden="true">
           <div class="blob"></div>
-          <img class="cloud" src="resources/icon.png" alt="" width="300" height="300" />
+          <img class="cloud" src="resources/kid-paint-photo.jpg" alt="" width="300" height="300" />
           @for (s of landing.content().about.stats.slice(0, 3); track s.label; let i = $index) {
             <div [class]="'float-card f' + i" [attr.data-color]="cardColors[i]">
               <strong>{{ s.value }}</strong>
