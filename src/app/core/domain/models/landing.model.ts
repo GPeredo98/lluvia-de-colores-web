@@ -99,9 +99,9 @@ export const DEFAULT_LANDING_CONTENT: LandingContent = {
       quote: 'El apoyo escolar le devolvió la confianza con las matemáticas. Muy recomendados.',
     },
     {
-      name: 'Lucía M.',
-      relation: 'Mamá de Emilia, 10 meses',
-      quote: 'Me encanta poder ver a qué hora llegó la profe y cuánto duró cada sesión.',
+      name: 'Oliver P.',
+      relation: 'Papá de Antonella, 10 meses',
+      quote: 'Antonellita ha mejorado mucho en su desarrollo y sobre todo el manejo de sus emociones lo cual me deja muy contento.',
     },
   ],
   faq: [
