@@ -1,14 +1,7 @@
-/**
- * Configuración de Supabase.
- *
- * Si `url` o `anonKey` están vacíos la app corre en MODO DEMO con datos en
- * memoria (persistidos en localStorage), útil para desarrollar la UI sin backend.
- * La anon key es pública por diseño; la seguridad la dan las políticas RLS.
- */
 export const environment = {
   supabase: {
-    url: '',
-    anonKey: '',
+    url: 'https://dxqsipcvphbjvogqtyjv.supabase.co',
+    anonKey: 'sb_publishable_tpReg-lf-DjwMjv4WFraEw_9bd06xRT',
     mediaBucket: 'media',
   },
   timeZone: 'America/La_Paz',
