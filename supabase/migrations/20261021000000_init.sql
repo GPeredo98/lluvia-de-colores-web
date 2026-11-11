@@ -30,8 +30,21 @@ create table public.profiles (
 );
 
 create or replace function public.is_admin()
-returns boolean language sql stable security definer set search_path = public as $$
-  select exists (select 1 from profiles where id = auth.uid() and role = 'admin');
+returns boolean
+language plpgsql
+stable
+security definer
+set search_path = public, pg_temp
+set row_security = off
+as $$
+begin
+  return exists (
+    select 1
+    from public.profiles
+    where id = auth.uid()
+      and role = 'admin'
+  );
+end;
 $$;
 
 -- ---------------------------------------------------------------------------
@@ -342,7 +355,7 @@ alter table public.payments enable row level security;
 do $$
 declare t text;
 begin
-  foreach t in array array['profiles','programs','staff','students','schedules','attendances',
+  foreach t in array array['programs','staff','students','schedules','attendances',
                            'calendar_events','landing_sections','charges','payments']
   loop
     execute format('create policy "admin_all" on public.%I for all to authenticated using (public.is_admin()) with check (public.is_admin())', t);

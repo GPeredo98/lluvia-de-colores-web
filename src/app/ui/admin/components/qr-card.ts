@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, effect, input, signal } from '@angular/core';
+import * as QRCode from 'qrcode';
 import { Student, studentQrPayload } from '../../../core/domain/models';
 
 /** Tarjeta imprimible con el QR que se deja en la casa del estudiante. */
@@ -75,16 +76,12 @@ export class QrCard {
     effect(() => {
       const payload = studentQrPayload(this.student());
       this.dataUrl.set(null);
-      void import('qrcode').then((qr) =>
-        qr
-          .toDataURL(payload, {
-            width: 480,
-            margin: 1,
-            errorCorrectionLevel: 'M',
-            color: { dark: '#13213f' },
-          })
-          .then((url) => this.dataUrl.set(url)),
-      );
+      void QRCode.toDataURL(payload, {
+        width: 480,
+        margin: 1,
+        errorCorrectionLevel: 'M',
+        color: { dark: '#13213f' },
+      }).then((url) => this.dataUrl.set(url));
     });
   }
 }
